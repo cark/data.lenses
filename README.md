@@ -1,6 +1,6 @@
 # lenses
 
-FIXME: write description
+API doc : [http://cark.github.com/data.lenses/]http://cark.github.com/data.lenses/
 
 ## Usage
 
