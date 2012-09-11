@@ -1,5 +1,5 @@
 (ns lenses_test
-  (:use [cara.data.lenses]
+  (:use [cark.data.lenses]
         [lazytest.describe :only (describe testing it do-it)]
         [lazytest.expect :only (expect)]
         [clojure.algo.monads]))

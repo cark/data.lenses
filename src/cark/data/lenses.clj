@@ -1,4 +1,4 @@
-(ns cara.data.lenses
+(ns cark.data.lenses
   "Provides data type and functions to work with lenses,
  also known as functional references."
   (:use [clojure.algo.monads]))
