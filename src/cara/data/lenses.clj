@@ -1,7 +1,7 @@
 (ns cara.data.lenses
   "Provides data type and functions to work with lenses,
  also known as functional references."
-  (:use [algo.monad]))
+  (:use [clojure.algo.monads]))
 
 (defprotocol PLens
   "All lenses answer to this protocol"
@@ -36,7 +36,7 @@ returning a new s."))
       ([func s]
          (setter (func (getter s)) s))
       ([func]
-         #(setter (func (getter %)) %)))))
+         #(setter (func (getter %)) %))))) 
 
 (defn lens
   "Creates and returns new lens.
@@ -63,7 +63,7 @@ example :
 lset'ing the value to nil dissociates the key"
   [key]
   (lens (fn [s]
-          (get s key))
+          (get s key)) 
         (fn [value s]
           (if value
             (assoc s key value)
