@@ -1,7 +1,8 @@
 (ns lenses_test
   (:use [cara.data.lenses]
         [lazytest.describe :only (describe testing it do-it)]
-        [lazytest.expect :only (expect)]))
+        [lazytest.expect :only (expect)]
+        [clojure.algo.monads]))
 
 (def point {:x 10 :y 20})
 (def x (lens :x (fn [val s] (assoc s :x val))))
@@ -91,3 +92,25 @@
     (= #{1 2} (lset (set-lens 2) true #{1})))
   (it "lset false removes the value from the set"
     (= #{1} (lset (set-lens 2) false #{1 2}))))
+
+(defn eval-state [mv state]
+  (get (mv state) 0))
+
+(defn exec-state [mv state]
+  (get (mv state) 1))
+
+(describe "state-m lens functions"
+  (it "get's the pointed value"
+    (= 10 (eval-state (with-monad state-m
+                        (slget x))
+                      point)))
+  (it "sets the pointed value"
+    (= {:x 1 :y 20} (exec-state (with-monad state-m
+                                  (slset x 1))
+                                point)))
+  (it "updates the pointed value"
+    (= {:x 11 :y 20} (exec-state (with-monad state-m
+                                   (slupd x inc))
+                                 point))))
+
+
