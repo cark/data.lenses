@@ -1,10 +1,10 @@
-# lenses
+# cara.data.lenses
 
 API doc : http://cark.github.com/data.lenses/
 
 ## Usage
 
-FIXME: write
+
 
 ## License
 
