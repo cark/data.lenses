@@ -1,10 +1,8 @@
 # cara.data.lenses
 
-API doc : http://cark.github.com/data.lenses/
-
 ## Usage
 
-
+API doc : http://cark.github.com/data.lenses/
 
 ## License
 
