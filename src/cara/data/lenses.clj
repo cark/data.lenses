@@ -14,7 +14,7 @@
 returning a new s."))
 
 ;; The Lens data type probably should not be used by the library user
-(deftype ^:private Lens [getter setter]
+(deftype ^:private Lens [getter setter] 
   PLens
   (lget [self s] (getter s))
   (lget [self] getter)
@@ -37,6 +37,8 @@ returning a new s."))
          (setter (func (getter s)) s))
       ([func]
          #(setter (func (getter %)) %))))) 
+
+(alter-meta! #'->Lens assoc :no-doc true)
 
 (defn lens
   "Creates and returns new lens.
