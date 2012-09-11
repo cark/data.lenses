@@ -1,6 +1,6 @@
 # lenses
 
-API doc : [http://cark.github.com/data.lenses/]http://cark.github.com/data.lenses/
+API doc : http://cark.github.com/data.lenses/
 
 ## Usage
 
