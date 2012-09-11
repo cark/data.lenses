@@ -4,7 +4,7 @@
   (:use [clojure.algo.monads]))
 
 (defprotocol PLens
-  "All lenses answer to this protocol"
+  "All lenses answer to this protocol."
   (lget [self s] [self]
     "returns the value pointed by the lens inside s.")
   (lset [self value s] [self value] [self]
