@@ -1,3 +1,4 @@
-(defproject example "1.0.0-SNAPSHOT"
-  :description "FIXME: write description"
-  :dependencies [[org.clojure/clojure "1.3.0"]])
+(defproject lenses.example "1.0.0-SNAPSHOT"
+  :description "an example project for cark/data.lenses"
+  :dependencies [[org.clojure/clojure "1.4.0"]
+                 [cark/data.lenses "0.0.1-SNAPSHOT"]])

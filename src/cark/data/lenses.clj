@@ -103,3 +103,4 @@ lset'ing the value to nil dissociates the key"
    [s (fetch-state)   
     _ (update-state (lupd lens func))]
    s))
+
