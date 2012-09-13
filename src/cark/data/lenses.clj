@@ -82,26 +82,23 @@ lset'ing the value to nil dissociates the key"
             (conj s val)
             (disj s val)))))
 
-(defmonadfn slget
+(defn slget
   "gets the value pointed by the lens parameter inside the state monad"
   [lens]
-  (m-bind (fetch-state) #(m-result (lget lens %))))
+  (fn [s]
+    [(lget lens s) s]))
 
-(defmonadfn slset
+(defn slset
   "sets the value pointed by the lens parameter inside the state monad,
  returning the monad value of the old state"
   [lens val]
-  (domonad
-   [s (fetch-state)
-    _ (set-state (lset lens val s))]
-   s))
+  (fn [s]
+    [s (lset lens val s)]))
 
-(defmonadfn slupd
+(defn slupd
     "updates the value pointed by the lens parameter inside the state monad,
  returning the monad value of the old state"
-  [lens func]
-  (domonad
-   [s (fetch-state)   
-    _ (update-state (lupd lens func))]
-   s))
+    [lens func]
+    (fn [s]
+      [s (lupd lens func s)]))
 
