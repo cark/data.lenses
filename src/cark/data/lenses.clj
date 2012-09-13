@@ -53,8 +53,9 @@ example :
   [getter-func setter-func]
   (Lens. getter-func setter-func))
 
-(defn lcomp [outer inner]
-  "composes 2 lenses."
+(defn lcomp
+  "Composes 2 lenses."
+  [outer inner]
   (lens (fn [s]
           (lget inner (lget outer s)))
         (fn [v s]
