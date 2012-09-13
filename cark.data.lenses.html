@@ -15,7 +15,7 @@ example :
 </pre></div><div class="public" id="var-lupd"><h3>lupd</h3><div class="usage"><code>(lupd self func s)</code><code>(lupd self func)</code><code>(lupd self)</code></div><pre class="doc">updates the value pointed by the lens by applying func on its current value,
 returning a new s.</pre></div><div class="public" id="var-map-val-lens"><h3>map-val-lens</h3><div class="usage"><code>(map-val-lens key)</code></div><pre class="doc">creates a lens on a map, pointing to the value accessed with the provided key.
 lset'ing the value to nil dissociates the key</pre></div><div class="public" id="var-set-lens"><h3>set-lens</h3><div class="usage"><code>(set-lens val)</code></div><pre class="doc">A lens over a set. lset'ing it to true conj'es the value, to false disj'es it
-</pre></div><div class="public" id="var-slget"><h3>slget</h3><div class="usage"></div><pre class="doc">gets the value pointed by the lens parameter inside the state monad
-</pre></div><div class="public" id="var-slset"><h3>slset</h3><div class="usage"></div><pre class="doc">sets the value pointed by the lens parameter inside the state monad,
-returning the monad value of the old state</pre></div><div class="public" id="var-slupd"><h3>slupd</h3><div class="usage"></div><pre class="doc">updates the value pointed by the lens parameter inside the state monad,
+</pre></div><div class="public" id="var-slget"><h3>slget</h3><div class="usage"><code>(slget lens)</code></div><pre class="doc">gets the value pointed by the lens parameter inside the state monad
+</pre></div><div class="public" id="var-slset"><h3>slset</h3><div class="usage"><code>(slset lens val)</code></div><pre class="doc">sets the value pointed by the lens parameter inside the state monad,
+returning the monad value of the old state</pre></div><div class="public" id="var-slupd"><h3>slupd</h3><div class="usage"><code>(slupd lens func)</code></div><pre class="doc">updates the value pointed by the lens parameter inside the state monad,
 returning the monad value of the old state</pre></div></div></body></html>
