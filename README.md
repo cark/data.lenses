@@ -4,6 +4,8 @@
 
 The library being still in its infancy there is no clojar upload yet. So for now you need to :
 
+using lein 1.7
+
 ### Clone the repository
     git clone git://github.com/cark/data.lenses.git
 ### Install cark/data.lenses in your local maven repository
