@@ -3,6 +3,8 @@
  also known as functional references."
   (:use [clojure.algo.monads]))
 
+(set! *warn-on-reflection* true)
+
 (defprotocol PLens
   "All lenses answer to this protocol."
   (lget [self s] [self]
