@@ -13,4 +13,6 @@
   :repositories {"stuartsierra-releases" "http://stuartsierra.com/maven2"
 		 "stuartsierra-snapshots" "http://stuartsierra.com/m2snapshots"}
   :set-version {:updates [{:path "README.md"
+                           :search-regex #"cark/data.lenses \"\d+\.\d+\.\d+(-SNAPSHOT)?\""}
+                          {:path "example/project.clj"
                            :search-regex #"cark/data.lenses \"\d+\.\d+\.\d+(-SNAPSHOT)?\""}]})
