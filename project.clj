@@ -1,5 +1,8 @@
 (defproject cark/data.lenses "0.0.1-SNAPSHOT"
-  :description "Implements lenses, also known as functional references"
+  :description "Implements lenses, also known as functional references."
+  :license {:name "Eclipse Public License"
+            :url "http://www.eclipse.org/legal/epl-v10.html"}
+  :url "https://github.com/cark/data.lenses"
   :dependencies [[org.clojure/clojure "1.4.0"]
                  [org.clojure/algo.monads "0.1.3-SNAPSHOT"]]
   :profiles {:dev {:plugins [[codox "0.6.1"]
