@@ -9,3 +9,4 @@
 /doc
 .lein-deps-sum
 /target
+/example/target
